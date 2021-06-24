@@ -27,9 +27,6 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-    
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
       
     - name: Login to DockerHub
       uses: docker/login-action@v1 
@@ -42,4 +39,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
           push: true
-          tags: stonges/java-app:latest  
+          tags: stonges/java-app:latest 
